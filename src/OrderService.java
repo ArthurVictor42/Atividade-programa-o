@@ -3,7 +3,7 @@ import interfaces.PaymentType;
 import repository.PedidoRepositorio;
 import services.Calculartotal;
 import services.EmailServico;
-// Aqui usamos SRP porque essa classe apenas coordena o fluxo do pedido. Usamos OCP porque novos métodos de pagamento
+// Aqui usamos SRP por motivos de que essa classe apenas coordena o fluxo do pedido. Usamos OCP porque novos métodos de pagamento
 // podem ser adicionados sem alterar essa classe. Aplicamos DIP porque ela depende da interface  PaymentMethod e não de implementações concretas. //
 public class OrderService {
 

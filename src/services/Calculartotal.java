@@ -2,18 +2,15 @@ package services;
 
 import java.util.List;
 
-/**
- * Aqui aplicamos SRP separando a responsabilidade do cálculo do pedido da classe principal.
- *
- * Dessa forma, se a regra de cálculo mudar, só sera afertado essa classe.
- */
+// Aqui aplicamos SRP separando a responsabilidade do cálculo do pedido da classe principal. Dessa forma, se a regra de cálculo mudar, só sera afertado essa classe.
+
 public class Calculartotal {
 
     public double calculateTotal(List<String> items) {
-        double total = 0;
+        double quantidadetotal = 0;
         for (String item : items) {
-            total += 10.0;
+            quantidadetotal += 10.0;
         }
-        return total;
+        return quantidadetotal;
     }
 }
