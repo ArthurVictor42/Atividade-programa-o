@@ -1,10 +1,10 @@
 package repository;
 
-// Usamos SRP porque essa classe serve apenas para salvar o pedido.//
+// usei SRP porque essa classe serve apenas para salvar o pedido realizado.//
 public class PedidoRepositorio {
 
     public void armazenar() {
-        System.out.println("Salvando pedido no banco");
+        System.out.println("Salvando pedido");
     }
 
 }

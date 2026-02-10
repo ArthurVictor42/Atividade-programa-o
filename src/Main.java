@@ -1,6 +1,6 @@
 import entity.DebitoPagamento;
 import entity.PixPagamento;
-import interfaces.PaymentType;
+import interfaces.TipoPagamento;
 import repository.PedidoRepositorio;
 import services.Calculartotal;
 import services.EmailServico;
@@ -10,8 +10,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        PaymentType payment = new DebitoPagamento();
-        PaymentType payment2 = new PixPagamento();
+        TipoPagamento payment = new DebitoPagamento();
+
+        TipoPagamento payment2 = new PixPagamento();
+
         OrderService service = new OrderService(
                 payment2,
                 new Calculartotal(),
