@@ -7,7 +7,14 @@ import interfaces.TipoPagamento;
 
 public class CreditoPagamento implements TipoPagamento {
     @Override
+    public String getNome() {
+        return "Crédito";
+    }
+
+    @Override
     public void pagamento(double quantidade) {
-        System.out.println("Pagamento no credito no valor de: " + quantidade);
+        System.out.println(
+                "Pagamento no débito no total de: " + quantidade
+        );
     }
 }

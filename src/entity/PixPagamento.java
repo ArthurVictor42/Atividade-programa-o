@@ -6,8 +6,15 @@ import interfaces.TipoPagamento;
 
 public class PixPagamento implements TipoPagamento {
 
-    public void pagamento(double quantidade) {
-        System.out.println("Pagamento no pix no valor de: " + quantidade);
+    @Override
+    public String getNome() {
+        return "PIX";
     }
 
+    @Override
+    public void pagamento(double quantidade) {
+        System.out.println(
+                "Pagamento no PIX no total:" + quantidade
+        );
+    }
 }

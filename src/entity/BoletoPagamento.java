@@ -6,7 +6,15 @@ import interfaces.TipoPagamento;
 //O LSP permite que ela seja usada sem mudar nada na classe principal.
 
 public class BoletoPagamento implements TipoPagamento {
-    public void pagamento(double quantidade){
-        System.out.println("Pagamento no boleto no valor de: " + quantidade);
+    @Override
+    public String getNome() {
+        return "Boleto";
+    }
+
+    @Override
+    public void pagamento(double quantidade) {
+        System.out.println(
+                "Pagamento no boleto no Total: " + quantidade
+        );
     }
 }

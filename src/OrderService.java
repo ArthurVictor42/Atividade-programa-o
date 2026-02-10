@@ -1,4 +1,5 @@
 import java.util.*;
+
 import interfaces.TipoPagamento;
 import repository.PedidoRepositorio;
 import services.Calculartotal;
@@ -28,9 +29,14 @@ public class OrderService {
 
     public void processOrder(String customerEmail, List<String> items) {
         double total = calculator.calculateTotal(items);
+
+        System.out.println("Método escolhido: " + tipoPagamento.getNome());
+
         tipoPagamento.pagamento(total);
+
         repository.armazenar();
-        emailService.enviar(customerEmail);
+
+        emailService.enviar(customerEmail, tipoPagamento.getNome());
     }
 }
 

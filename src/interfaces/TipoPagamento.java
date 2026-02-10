@@ -6,6 +6,9 @@ package interfaces;
 //O LSP é aplicado porque qualquer classe que implemente PaymentMethod pode ser usada no lugar de outra sem quebrar o sistema.
 
 public interface TipoPagamento {
-    //Metodo de pagamento padrão
+
+    // Ele pega o tipo de pagamento
+    String getNome();
+
     void pagamento(double quantidade);
 }
